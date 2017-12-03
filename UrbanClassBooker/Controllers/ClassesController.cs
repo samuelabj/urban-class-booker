@@ -23,7 +23,7 @@ namespace UrbanClassBooker.Controllers {
                 var viewState = formCq.Select("input[name=__VIEWSTATE]").Val();
                 var eventValidation = formCq.Select("input[name=__EVENTVALIDATION]").Val();
                 var barcodeName = formCq.Select("#cphBody_txtBarcode").Attr("name");
-                var submitName = formCq.Select("#cphBody_btnSubmit").Attr("name");
+                var submitName = "ctl00$cphBody$btnSubmit";// formCq.Select("#cphBody_btnSubmit").Attr("name");
 
                 var content = new FormUrlEncodedContent(new Dictionary<string, string> {
                     {"__EVENTVALIDATION", eventValidation},
